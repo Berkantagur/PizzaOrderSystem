@@ -133,7 +133,7 @@ def main():
 
     payment = yourPizza.get_cost() + yourPizzaSauce.get_cost()
 
-    name = input("Your name: ")
+    name = input("Your Name: ")
     idNumber = input("Your ID number: ")
     creditCardNumber= input("Your credit card number: ")
     creditCardPassword = input("Your credit card password: ")
