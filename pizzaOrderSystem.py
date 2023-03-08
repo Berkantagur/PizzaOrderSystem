@@ -135,7 +135,7 @@ def main():
 
     name = input("Your Name: ")
     idNumber = input("Your ID Number: ")
-    creditCardNumber= input("Your credit card number: ")
+    creditCardNumber= input("Your Credit Card Number: ")
     creditCardPassword = input("Your credit card password: ")
 
     now = datetime.datetime.now()
