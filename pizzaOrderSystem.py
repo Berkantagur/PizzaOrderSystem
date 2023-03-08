@@ -107,7 +107,7 @@ def main():
     
     sauceChoice = input("Please choose the sauce you want to add to your pizza (5-11)")
     while sauceChoice not in ["5", "6", "7", "8", "9", "10", "11"]:
-        sauceChoice = input("Invalid input! Please choose a valid pizza number (from 5 to 11)")
+        sauceChoice = input("Invalid input! Please choose a valid pizza number (from 5 to 11): ")
 
     if sauceChoice == "5":
         yourPizzaSauce = olives()
