@@ -136,7 +136,7 @@ def main():
     name = input("Your Name: ")
     idNumber = input("Your ID Number: ")
     creditCardNumber= input("Your Credit Card Number: ")
-    creditCardPassword = input("Your credit card password: ")
+    creditCardPassword = input("Your Credit Card Password: ")
 
     now = datetime.datetime.now()
     ordersTime = datetime.datetime.strftime(now, "%c")
