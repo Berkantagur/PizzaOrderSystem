@@ -149,7 +149,7 @@ def main():
     payment = yourPizza.get_cost() + yourPizzaSauce.get_cost()
 
 
-    #it should ask the user for a name, ID number, credit card number and credit card password with all required information
+    #it should ask the user for a name, ID number, credit card number and credit card password with all required information.
     name = input("Your Name: ")
     idNumber = input("Your ID Number: ")
     creditCardNumber= input("Your Credit Card Number: ")

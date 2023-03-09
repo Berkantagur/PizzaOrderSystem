@@ -1,4 +1,4 @@
-Pizza Type, Name, ID Number, Credit Card Number, Credit Card Password, Orders Time, Total Payment($)
+Pizza Type, Name, ID Number, Credit Card Number, CCard Password, Orders Time, Total Payment($)
 
 Margherita Pizza (with Meat),Berkant,20234568960,2983-5463-9867-2134,1234,Fri Mar 10 00:15:52 2023,18.98
 
@@ -6,3 +6,4 @@ Plain Pizza (with Goat Cheese),Kaan,20238795039,4375-5689-3255-6790,5285,Fri Mar
 
 Turk Pizza (with Mushrooms),Ahmet Furkan,20236750981,3586-0926-5673-8364,7810,Fri Mar 10 00:17:59 2023,15.48
 
+Classic Pizza (with Corn),Gaffar Cuma,20237281089,8746-1345-6784-5490,0923,Fri Mar 10 00:26:34 2023,11.98
