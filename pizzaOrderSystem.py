@@ -95,9 +95,11 @@ class notSauce(decorator):
 #Create a main function.
 def main():
 
+    #printing the menu on the screen
     menu = open("menu.txt")
     print(menu.read())
 
+    #the user choose a pizza and sauce from the menu
     pizzaChoice = input("Please choose the pizza that you want (1-4): ")
     while pizzaChoice not in ["1", "2", "3", "4"]:
         pizzaChoice = input("Invalid input! Please choose a valid pizza number (from 1 to 4): ")
@@ -139,7 +141,9 @@ def main():
     
     else:
         yourPizzaSauce = notSauce()
+        
     
+    #Calculating the total price of selected products
     payment = yourPizza.get_cost() + yourPizzaSauce.get_cost()
 
     name = input("Your Name: ")
