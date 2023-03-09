@@ -14,6 +14,7 @@ class pizza:
     def get_cost(self):
         return self.cost
 
+
 #Classic, Margherita, Turk Pizza, Dominos Pizza. Create pizza classes. 
 #Since each of these pizza types is a type of pizza, these classes will be defined as subclasses.
 
@@ -37,8 +38,8 @@ class plainPizza(pizza):
         self.description = "Plain Pizza"
         self.cost = 8.49
 
-#Create a decorator class. Decorator is called super class of all sauce classes here.
 
+#Create a decorator class. Decorator is called super class of all sauce classes here.
 class decorator(pizza):
     def __init__(self, description, cost):
         self.description = description
@@ -50,6 +51,7 @@ class decorator(pizza):
 
     def get_cost(self):
         return self.cost
+    
 
 #Determine Olives, Mushrooms, Goat Cheese, Meat, Onions, and Corn 
 #as sauces, and define each of the sauces you have determined as a class. 
@@ -90,6 +92,7 @@ class notSauce(decorator):
         self.description = "Not sauce"
         
 
+#Create a main function.
 def main():
 
     menu = open("menu.txt")
