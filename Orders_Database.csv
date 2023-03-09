@@ -1,3 +1,6 @@
-Pizza Type,Name,ID Number,Credit Card Number,Orders Time,Total Payment($)
-Margherita Pizza (with Meat),Berkant,20236478960,5982-7654-8679-1230,1234,Fri Mar 10 00:11:36 2023,18.98
+Margherita Pizza (with Meat),Berkant,20234568960,2983-5463-9867-2134,1234,Fri Mar 10 00:15:52 2023,18.98
+
+Plain Pizza (with Goat Cheese),Kaan,20238795039,4375-5689-3255-6790,5285,Fri Mar 10 00:17:05 2023,12.48
+
+Turk Pizza (with Mushrooms),Ahmet Furkan,20236750981,3586-0926-5673-8364,7810,Fri Mar 10 00:17:59 2023,15.48
 
