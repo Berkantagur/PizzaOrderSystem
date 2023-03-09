@@ -1,12 +1,15 @@
-* Please Choose a Pizza Base: 
-1: Classic 
-2: Margherita 
-3: TurkPizza 
-4: PlainPizza 
-* and sauce of your choice: 
-5: Olives 
-6: Mushrooms 
-7: GoatCheese 
-8: Meat 
-9: Onions 
-10: Corn 
+      ***WELCOME***
+## Please Choose a Pizza Base: 
+## 1: Classic 
+## 2: Margherita 
+## 3: TurkPizza 
+## 4: PlainPizza
+
+## And sauce of your choice: 
+## 5: Olives 
+## 6: Mushrooms 
+## 7: GoatCheese 
+## 8: Meat 
+## 9: Onions 
+## 10: Corn 
+## 11: Not Sauce

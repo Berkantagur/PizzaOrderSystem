@@ -20,34 +20,36 @@ class pizza:
 class classicPizza(pizza):
     def __init__(self):
         self.description = "Classic Pizza"
-        self.price = 10.99
-    
+        self.cost = 10.99
+
 class margheritaPizza(pizza):
     def __init__(self):
         self.description = "Margherita Pizza"
-        self.price = 13.49
+        self.cost = 13.49
 
 class turkPizza(pizza):
     def __init__(self):
         self.description = "Turk Pizza"
-        self.price = 12.99
+        self.cost = 12.99
 
 class plainPizza(pizza):
     def __init__(self):
         self.description = "Plain Pizza"
-        self.price = 8.49
+        self.cost = 8.49
 
 #Create a decorator class. Decorator is called super class of all sauce classes here.
 
 class decorator(pizza):
     def __init__(self, description, cost):
-        pizza.__init__(description, cost)
+        self.description = description
+        self.cost = cost
+        super(pizza).__init__(description, cost)
 
     def get_description(self):
-        return pizza.get_description()
+        return self.description
 
     def get_cost(self):
-        return pizza.get_cost()
+        return self.cost
 
 #Determine Olives, Mushrooms, Goat Cheese, Meat, Onions, and Corn 
 #as sauces, and define each of the sauces you have determined as a class. 
@@ -145,4 +147,4 @@ def main():
         writer = csv.writer(file)
         writer.writerow([yourPizza.__class__.__name__, name, idNumber, creditCardNumber, creditCardPassword, ordersTime, payment])
     
-    
+main()
