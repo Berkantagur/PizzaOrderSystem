@@ -99,7 +99,8 @@ def main():
     menu = open("menu.txt")
     print(menu.read())
 
-    #the user choose a pizza and sauce from the menu
+
+    #the user choose a pizza from the menu
     pizzaChoice = input("Please choose the pizza that you want (1-4): ")
     while pizzaChoice not in ["1", "2", "3", "4"]:
         pizzaChoice = input("Invalid input! Please choose a valid pizza number (from 1 to 4): ")
@@ -116,7 +117,8 @@ def main():
     else:
         yourPizza = plainPizza()
 
-    
+
+    ##the user choose a sauce from the menu
     sauceChoice = input("Please choose the sauce you want to add to your pizza (5-11): ")
     while sauceChoice not in ["5", "6", "7", "8", "9", "10", "11"]:
         sauceChoice = input("Invalid input! Please choose a valid pizza number (from 5 to 11): ")
@@ -141,11 +143,13 @@ def main():
     
     else:
         yourPizzaSauce = notSauce()
-        
+
     
     #Calculating the total price of selected products
     payment = yourPizza.get_cost() + yourPizzaSauce.get_cost()
+    
 
+    #it should ask the user for a name, ID number, credit card number and credit card password with all required information
     name = input("Your Name: ")
     idNumber = input("Your ID Number: ")
     creditCardNumber= input("Your Credit Card Number: ")
