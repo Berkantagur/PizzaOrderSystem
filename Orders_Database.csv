@@ -1,2 +1,3 @@
-Turk Pizza (with Olives),Berkant,12345678,4321,32,Thu Mar  9 23:37:54 2023,14.98
-Turk Pizza (with Mushrooms),Berkant Bey,2023555068,4976-8327-3486-4568,1234,Thu Mar  9 23:53:38 2023,15.48
+Pizza Type,Name,ID Number,Credit Card Number,Orders Time,Total Payment($)
+Margherita Pizza (with Meat),Berkant,20236478960,5982-7654-8679-1230,1234,Fri Mar 10 00:11:36 2023,18.98
+
