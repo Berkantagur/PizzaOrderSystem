@@ -130,7 +130,7 @@ def main():
         yourPizzaSauce = mushrooms()
 
     elif sauceChoice == "7":
-        yourPizzaSauce = goatCheese
+        yourPizzaSauce = goatCheese()
 
     elif sauceChoice == "8":
         yourPizzaSauce = meat()
@@ -161,9 +161,9 @@ def main():
     now = datetime.datetime.now()
     ordersTime = datetime.datetime.strftime(now, "%c")
 
-    with open("Orders_Database.csv", mode = "a") as newFile:
-        writer = csv.writer(newFile)
-        writer.writerow([yourPizza.get_description() + " (with " + yourPizzaSauce.get_description() + ")", name, idNumber, creditCardNumber, creditCardPassword, ordersTime, payment])
+    with open("Orders_Database.csv", "a") as orderInfo:
+        orderInfo = csv.writer(orderInfo, delimiter=',')
+        orderInfo.writerow([yourPizza.get_description() + " (with " + yourPizzaSauce.get_description() + ")", name, idNumber, creditCardNumber, creditCardPassword, ordersTime, payment])
     
 
     #Order receipt
