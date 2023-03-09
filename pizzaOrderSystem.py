@@ -147,7 +147,7 @@ def main():
     
     #Calculating the total price of selected products
     payment = yourPizza.get_cost() + yourPizzaSauce.get_cost()
-    
+
 
     #it should ask the user for a name, ID number, credit card number and credit card password with all required information
     name = input("Your Name: ")
@@ -156,6 +156,8 @@ def main():
     creditCardPassword = input("Your Credit Card Password: ")
 
 
+    #keep the user's name, user id, credit card information, description of order, 
+    #time order and credit card password in the "Orders_Database.csv" file, which we call the database.
     now = datetime.datetime.now()
     ordersTime = datetime.datetime.strftime(now, "%c")
 
@@ -164,6 +166,7 @@ def main():
         writer.writerow([yourPizza.get_description() + " (with " + yourPizzaSauce.get_description() + ")", name, idNumber, creditCardNumber, creditCardPassword, ordersTime, payment])
     
 
+    #Order receipt
     print("\n\n\t~~~ORDER DETAILS~~~\n")
     print("ORDER'S TIME: ",ordersTime)
     print("NAME: ",name)
@@ -174,4 +177,5 @@ def main():
     print("TOTAL PAYMENT: ",payment,"$")
     print("...ENJOY YOUR MEAL...")
 
+#running the main function
 main()
