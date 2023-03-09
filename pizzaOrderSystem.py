@@ -83,6 +83,11 @@ class corn(decorator):
     def __init__(self):
         self.cost = 0.99
         self.description = "Corn"
+
+class notSauce(decorator):
+    def __init__(self):
+        self.cost = 0
+        self.description = "Not sauce"
         
 
 def main():
@@ -130,9 +135,8 @@ def main():
         yourPizzaSauce = corn()
     
     else:
-        print("Not Sauce")
+        yourPizzaSauce = notSauce()
     
-
     payment = yourPizza.get_cost() + yourPizzaSauce.get_cost()
 
     name = input("Your Name: ")
@@ -140,11 +144,23 @@ def main():
     creditCardNumber= input("Your Credit Card Number: ")
     creditCardPassword = input("Your Credit Card Password: ")
 
+
     now = datetime.datetime.now()
     ordersTime = datetime.datetime.strftime(now, "%c")
 
-    with open("Orders_Database.csv", mode = "a") as file:
-        writer = csv.writer(file)
-        writer.writerow([yourPizza.__class__.__name__, name, idNumber, creditCardNumber, creditCardPassword, ordersTime, payment])
+    with open("Orders_Database.csv", mode = "a") as newFile:
+        writer = csv.writer(newFile)
+        writer.writerow([yourPizza.get_description() + " (with " + yourPizzaSauce.get_description() + ")", name, idNumber, creditCardNumber, creditCardPassword, ordersTime, payment])
     
+
+    print("\n\n\t~~~ORDER DETAILS~~~\n")
+    print("ORDER'S TIME: ",ordersTime)
+    print("NAME: ",name)
+    print("ID NUMBER: ",idNumber)
+    print("CREDIT CARD NUMBER: ",creditCardNumber)
+    print("CREDIT CARD PASSWORD: ",creditCardPassword)
+    print("ORDER DESCRIPTION: ",yourPizza.get_description() + " (with " + yourPizzaSauce.get_description() + ")")
+    print("TOTAL PAYMENT: ",payment,"$")
+    print("...ENJOY YOUR MEAL...")
+
 main()
