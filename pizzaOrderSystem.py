@@ -100,9 +100,9 @@ def main():
         currentMenu = file.read()
 
     #Making headlines bigger and bolder
-    newMenu = currentMenu.replace("***WELCOME***", "\n\t\033[33m***WELCOME***\033[0m")
-    newMenu = newMenu.replace("Pizza Base:", "\n\033[1m\033[92m\033[4mPizza Base:\033[0m")
-    newMenu = newMenu.replace("Sauces:", "\n\033[1m\033[95m\033[4mSauces:\033[0m")
+    newMenu = currentMenu.replace("***WELCOME***", "\n\t\033[33m ***WELCOME***\033[0m")
+    newMenu = newMenu.replace("Pizza Base:", "\n\033[1m\033[92m\033[4m Pizza Base:\033[0m")
+    newMenu = newMenu.replace("Sauces:", "\n\033[1m\033[95m\033[4m Sauces:\033[0m")
 
     #Coloring and decorating other texts with characters
     newMenu = newMenu.replace("Classic --> 1", "\033[1m\033[31m~\033[0m Classic --> 1")
@@ -116,17 +116,15 @@ def main():
     newMenu = newMenu.replace("Onions --> 14", "\033[1m\033[93m~\033[0m Onions --> 14")
     newMenu = newMenu.replace("Corn --> 15", "\033[1m\033[94m~\033[0m Corn --> 15")
     newMenu = newMenu.replace("Not Sauce --> 16", "\033[1m\033[95m~\033[0m Not Sauce --> 16\n")
-    newMenu = newMenu.replace("Enjoy your pizza!", "\033[1m\033[34mEnjoy your pizza!\033[3m")
 
     #printing the menu on the screen
     print(newMenu)
 
 
-
     #the user choose a pizza from the menu
-    pizzaChoice = input("Please choose the pizza that you want (1-4): ")
+    pizzaChoice = input("\033[0m\033[3m\033[34m Please choose the pizza that you want (1-4): ")
     while pizzaChoice not in ["1", "2", "3", "4"]:
-        pizzaChoice = input("Invalid input! Please choose a valid pizza number (from 1 to 4): ")
+        pizzaChoice = input("\033[0m\033[3m\033[34m Invalid input! Please choose a valid pizza number (from 1 to 4): ")
 
     if pizzaChoice == "1":
         yourPizza = classicPizza()
@@ -142,9 +140,9 @@ def main():
 
 
     ##the user choose a sauce from the menu
-    sauceChoice = input("Please choose the sauce you want to add to your pizza (5-11): ")
+    sauceChoice = input("\033[0m\033[3m\033[34m Please choose the sauce you want to add to your pizza (10-16): ")
     while sauceChoice not in ["10", "11", "12", "13", "14", "15", "16"]:
-        sauceChoice = input("Invalid input! Please choose a valid pizza number (from 5 to 11): ")
+        sauceChoice = input("\033[0m\033[3m\033[34m Invalid input! Please choose a valid pizza number (from 5 to 11): ")
 
     if sauceChoice == "10":
         yourPizzaSauce = olives()
@@ -173,10 +171,10 @@ def main():
 
 
     #it should ask the user for a name, ID number, credit card number and credit card password with all required information.
-    name = input("Your Name: ")
-    idNumber = input("Your ID Number: ")
-    creditCardNumber= input("Your Credit Card Number: ")
-    creditCardPassword = input("Your Credit Card Password: ")
+    name = input("\033[0m\033[3m\033[34m Your Name: ")
+    idNumber = input("\033[0m\033[3m\033[34m Your ID Number: ")
+    creditCardNumber= input("\033[0m\033[3m\033[34m Your Credit Card Number: ")
+    creditCardPassword = input("\033[0m\033[3m\033[34m Your Credit Card Password: ")
 
 
     #keep the user's name, user id, credit card information, description of order, 
@@ -190,15 +188,18 @@ def main():
     
 
     #Order receipt
-    print("\n\n\t~~~ORDER DETAILS~~~\n")
-    print("ORDER'S TIME: ",ordersTime)
-    print("NAME: ",name)
-    print("ID NUMBER: ",idNumber)
-    print("CREDIT CARD NUMBER: ",creditCardNumber)
-    print("CREDIT CARD PASSWORD: ",creditCardPassword)
-    print("ORDER DESCRIPTION: ",yourPizza.get_description() + " (with " + yourPizzaSauce.get_description() + ")")
-    print("TOTAL PAYMENT: ",payment,"$")
-    print("...ENJOY YOUR MEAL...")
+    from termcolor import colored
+
+    print("\n\n\t" + colored("~~~ORDER DETAILS~~~", "light_magenta") + "\n")
+    print(colored("\033[1m ORDER'S TIME: ", "light_green") + colored(ordersTime, "light_cyan"))
+    print(colored("\033[1m NAME: ", "light_green" ) + colored(name, "light_cyan"))
+    print(colored("\033[1m ID NUMBER: ", "light_green") + colored(idNumber, "light_cyan"))
+    print(colored("\033[1m CREDIT CARD NUMBER: ", "light_green") + colored(creditCardNumber, "light_cyan"))
+    print(colored("\033[1m CREDIT CARD PASSWORD: ", "light_green") + colored(creditCardPassword, "light_cyan"))
+    print(colored("\033[1m ORDER DESCRIPTION: ", "light_green") + colored(yourPizza.get_description() + " (with " + yourPizzaSauce.get_description() + ")", "light_cyan"))
+    print(colored("\033[1m TOTAL PAYMENT: ", "light_red") + colored(payment,"light_red") + colored("$", "light_red") + "\n")
+    print(colored("\t\033[1m\033[3m ~~~ENJOY YOUR MEAL~~~", "light_magenta") + "\n")
+
 
 #running the main function
 main()
