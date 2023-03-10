@@ -101,8 +101,8 @@ def main():
 
     #Making headlines bigger and bolder
     newMenu = currentMenu.replace("***WELCOME***", "\n\t\033[33m***WELCOME***\033[0m")
-    newMenu = newMenu.replace("Pizza Base:", "\n\033[1m\033[92mPizza Base:\033[0m")
-    newMenu = newMenu.replace("Sauces:", "\n\033[1m\033[95mSauces:\033[0m")
+    newMenu = newMenu.replace("Pizza Base:", "\n\033[1m\033[92m\033[4mPizza Base:\033[0m")
+    newMenu = newMenu.replace("Sauces:", "\n\033[1m\033[95m\033[4mSauces:\033[0m")
 
     #Coloring and decorating other texts with characters
     newMenu = newMenu.replace("Classic --> 1", "\033[1m\033[31m~\033[0m Classic --> 1")
