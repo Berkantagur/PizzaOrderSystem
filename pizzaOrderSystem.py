@@ -95,9 +95,32 @@ class notSauce(decorator):
 #Create a main function.
 def main():
 
+    #reading the current menu file
+    with open("menu.txt", "r") as file:
+        currentMenu = file.read()
+
+    #Making headlines bigger and bolder
+    newMenu = currentMenu.replace("***WELCOME***", "\n\t\033[33m***WELCOME***\033[0m")
+    newMenu = newMenu.replace("Pizza Base:", "\n\033[1m\033[92mPizza Base:\033[0m")
+    newMenu = newMenu.replace("Sauces:", "\n\033[1m\033[95mSauces:\033[0m")
+
+    #Coloring and decorating other texts with characters
+    newMenu = newMenu.replace("Classic --> 1", "\033[1m\033[31m~\033[0m Classic --> 1")
+    newMenu = newMenu.replace("Margherita --> 2", "\033[1m\033[32m~\033[0m Margherita --> 2")
+    newMenu = newMenu.replace("TurkPizza --> 3", "\033[1m\033[33m~\033[0m TurkPizza --> 3")
+    newMenu = newMenu.replace("PlainPizza --> 4", "\033[1m\033[34m~\033[0m PlainPizza --> 4")
+    newMenu = newMenu.replace("Olives --> 10", "\033[1m\033[93m~\033[0m Olives --> 10")
+    newMenu = newMenu.replace("Mushrooms --> 11", "\033[1m\033[36m~\033[0m Mushrooms --> 11")
+    newMenu = newMenu.replace("GoatCheese --> 12", "\033[1m\033[91m~\033[0m GoatCheese --> 12")
+    newMenu = newMenu.replace("Meat --> 13", "\033[1m\033[92m~\033[0m Meat --> 13")
+    newMenu = newMenu.replace("Onions --> 14", "\033[1m\033[93m~\033[0m Onions --> 14")
+    newMenu = newMenu.replace("Corn --> 15", "\033[1m\033[94m~\033[0m Corn --> 15")
+    newMenu = newMenu.replace("Not Sauce --> 16", "\033[1m\033[95m~\033[0m Not Sauce --> 16\n")
+    newMenu = newMenu.replace("Enjoy your pizza!", "\033[1m\033[34mEnjoy your pizza!\033[3m")
+
     #printing the menu on the screen
-    menu = open("menu.txt")
-    print(menu.read())
+    print(newMenu)
+
 
 
     #the user choose a pizza from the menu
@@ -120,25 +143,25 @@ def main():
 
     ##the user choose a sauce from the menu
     sauceChoice = input("Please choose the sauce you want to add to your pizza (5-11): ")
-    while sauceChoice not in ["5", "6", "7", "8", "9", "10", "11"]:
+    while sauceChoice not in ["10", "11", "12", "13", "14", "15", "16"]:
         sauceChoice = input("Invalid input! Please choose a valid pizza number (from 5 to 11): ")
 
-    if sauceChoice == "5":
+    if sauceChoice == "10":
         yourPizzaSauce = olives()
     
-    elif sauceChoice == "6":
+    elif sauceChoice == "11":
         yourPizzaSauce = mushrooms()
 
-    elif sauceChoice == "7":
+    elif sauceChoice == "12":
         yourPizzaSauce = goatCheese()
 
-    elif sauceChoice == "8":
+    elif sauceChoice == "13":
         yourPizzaSauce = meat()
     
-    elif sauceChoice == "9":
+    elif sauceChoice == "14":
         yourPizzaSauce = onions()
 
-    elif sauceChoice == "10":
+    elif sauceChoice == "15":
         yourPizzaSauce = corn()
     
     else:
