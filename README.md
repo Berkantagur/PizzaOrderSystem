@@ -1,6 +1,6 @@
 # 🍕PizzaOrderSystem🍕
 
-## Project Overview
+## Project Overview💼 
 
 Would you like to open a pizza shop? Then this project could be your dream project. The project aims to have users design their own pizzas and add the user to the database after paying. So what kind of tasks do we have in this project?
 
@@ -32,15 +32,15 @@ Create a file named Menu.txt and write the following text in it.
 - 16: Corn 
 ##### ´Enjoy your pizza!´
 
-## Create superclass “pizza”
+## Create superclass “pizza”🧀
 Define the get_description() and get_cost() methods for encapsulation that creates the pizza class and inside this class.
 This description should be a short description of the prepared pizza!
 
-## Create subclass “pizza”
+## Create subclass “pizza”🥩
 Classic, Margherita, Turk Pizza, Dominos Pizza. Create pizza classes. Since each of these pizza types is a type of pizza, these classes will be defined as subclasses.
 Don't forget that each pizza must have its own price and description of the pizzas as variables.
 
-## Create superclass “Decorator”
+## Create superclass “Decorator”🍄
 Create a decorator class. Decorator is called super class of all sauce classes here.
 The decorator class will use the get_description() and get_cost() methods using the properties of the pizza class. Complete the decorator class using the following methods.
 
