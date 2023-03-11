@@ -6,16 +6,16 @@ Would you like to open a pizza shop? Then this project could be your dream proje
 
 The Pizza Order system starts with the users choosing the pizza on the menu and the sauces they want.  They have to pay with their choice of sauce and pizza.  Users are required to pay by credit card.  Each pizza has a description and price.  Note that these values ​​must be set as a constant value within the classes.
 
-## Creating a Google Colaboratory File
+## Creating a Google Colaboratory File🗃️
 
 Make sure your project has .ipynb extension.
 Make sure that there are comment lines explaining the details in your project.
 When submitting the project, submit the cells of this .ipynb file so that the cells are run and the results are visible.
 
-## Importing Required Libraries
+## Importing Required Libraries :octocat:
 Import csv and datetime libraries
 
-## Create “Menu.txt”
+## Create “Menu.txt”🗞️
 Create a file named Menu.txt and write the following text in it.
 
 #### Please Choose a Pizza Base: 
