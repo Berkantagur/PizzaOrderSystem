@@ -142,7 +142,7 @@ def main():
     ##the user choose a sauce from the menu
     sauceChoice = input("\033[0m\033[3m\033[34m Please choose the sauce you want to add to your pizza (10-16): ")
     while sauceChoice not in ["10", "11", "12", "13", "14", "15", "16"]:
-        sauceChoice = input("\033[0m\033[3m\033[34m Invalid input! Please choose a valid pizza number (from 5 to 11): ")
+        sauceChoice = input("\033[0m\033[3m\033[34m Invalid input! Please choose a valid pizza number (from 10 to 16): ")
 
     if sauceChoice == "10":
         yourPizzaSauce = olives()
